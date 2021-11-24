@@ -53,19 +53,6 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
     </dependency>
-
-    <dependency>
-      <groupId>com.intuit.karate</groupId>
-      <artifactId>karate-junit5</artifactId>
-      <version>${karate.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.intuit.karate</groupId>
-      <artifactId>karate-gatling</artifactId>
-      <version>${karate.version}</version>
-      <scope>test</scope>
-    </dependency>  
   </dependencies>
 
   <build>
@@ -93,25 +80,6 @@
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>io.gatling</groupId>
-        <artifactId>gatling-maven-plugin</artifactId>
-        <version>${gatling.plugin.version}</version>
-        <configuration>
-            <simulationsFolder>src/test/java</simulationsFolder>
-            <includes>
-                <include>mock.CatsKarateSimulation</include>
-            </includes>
-        </configuration>
-        <executions>
-            <execution>
-                <phase>test</phase>
-                <goals>
-                    <goal>test</goal>
-                </goals>
-            </execution>
-        </executions>                
-    </plugin>
     </plugins>
   </build>
 
